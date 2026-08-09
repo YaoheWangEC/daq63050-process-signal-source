@@ -1,0 +1,14 @@
+#ifndef COMMAND_HANDLER_H
+#define COMMAND_HANDLER_H
+
+#include <stdint.h>
+
+char* lscmd_handler(int argc, char **argv);
+char* echo_handler(int argc, char **argv);
+char* device_handler(int argc, char **argv);
+char* mode_handler(int argc, char **argv);
+char* offset_handler(int argc, char **argv);
+char* vpp_handler(int argc, char **argv);
+char* status_handler(int argc, char **argv);
+
+#endif // COMMAND_HANDLER_H

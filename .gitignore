@@ -50,3 +50,32 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Keil MDK build outputs
+objects/
+listings/
+*.crf
+*.axf
+*.sct
+*.lnp
+*.dep
+*.iex
+*.lst
+*.htm
+*.build_log.htm
+
+# Keil MDK user-specific
+*.uvguix.*
+*.uvoptx
+
+# Log files
+*.log
+
+# Backup files
+*.bak
+backup/
+
+# OS generated files
+Thumbs.db
+.DS_Store
+/software/process-signal-source-l021k8u7-4/project/MDK_V5/.vscode
