@@ -80,3 +80,10 @@ backup/
 Thumbs.db
 .DS_Store
 /software/process-signal-source-l021k8u7-4/project/MDK_V5/.vscode
+
+# Python
+__pycache__/
+*.py[cod]
+
+# IDE
+.idea/
