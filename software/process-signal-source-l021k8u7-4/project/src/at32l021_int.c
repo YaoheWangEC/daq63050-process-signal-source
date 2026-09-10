@@ -162,7 +162,12 @@ void DMA1_Channel5_4_IRQHandler(void)
   /* add user code end DMA1_Channel5_4_IRQ 0 */
 
   /* add user code begin DMA1_Channel5_4_IRQ 1 */
-
+  /* USART4 TX DMA (DMA1_CHANNEL4) 传输完成: 清标志后交由命令框架善后 */
+  if (dma_flag_get(DMA1_FDT4_FLAG) != RESET)
+  {
+    dma_flag_clear(DMA1_FDT4_FLAG);
+    command_io_uart_tx_isr();
+  }
   /* add user code end DMA1_Channel5_4_IRQ 1 */
 }
 
