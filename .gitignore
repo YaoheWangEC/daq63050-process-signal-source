@@ -63,6 +63,7 @@ listings/
 *.lst
 *.htm
 *.build_log.htm
+keil-build-viewer-record.txt
 
 # Keil MDK user-specific
 *.uvguix.*
