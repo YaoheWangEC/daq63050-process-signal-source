@@ -216,7 +216,7 @@ void TMR14_GLOBAL_IRQHandler(void)
     /* clear flag */
     tmr_flag_clear(TMR14, TMR_OVF_FLAG);
 
-    samplerate_10kHz_handler();
+    dac_update_handler();
     /* add user code end TMR14_TMR_OVF_FLAG */
   }
 

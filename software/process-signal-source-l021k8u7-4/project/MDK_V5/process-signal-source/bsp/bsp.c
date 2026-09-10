@@ -140,9 +140,9 @@ void tick_handler(void)
 }
 
 /**
- * @brief 10kHz 触发中断
+ * @brief 50kHz DAC 波形更新中断
  */
-void samplerate_10kHz_handler(void)
+void dac_update_handler(void)
 {
     static uint8_t step = 0;
 

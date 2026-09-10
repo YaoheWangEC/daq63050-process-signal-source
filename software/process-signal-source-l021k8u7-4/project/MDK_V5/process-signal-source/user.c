@@ -7,6 +7,7 @@
 #include "wk_system.h"
 #include "command_parser.h"
 #include "command_io.h"
+#include "command_fifo.h"
 #include "wk_wdt.h"
 #include <stdio.h>
 
@@ -32,6 +33,7 @@ void setup(void)
     select_item = 0;
     configuring = false;
 
+    command_fifo_init();
     command_io_init(&command_io_uart);
     command_parser_init();
 
