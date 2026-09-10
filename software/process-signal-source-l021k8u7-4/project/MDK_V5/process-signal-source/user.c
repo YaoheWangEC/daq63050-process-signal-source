@@ -115,6 +115,23 @@ static void display_handler(void)
     sprintf(buf, "VPP  %4umV", (unsigned int)g_vars.dac_vpp);
     canvas_draw_string(3, 20, buf, FONTSIZE_0806, true);
 
+    // DC 模式输出状态
+    if (g_vars.device_mode == MODE_DC)
+    {
+        int32_t meas_mv = (int32_t)(g_vars.dac_volt * 1000.0f + 0.5f);
+        int32_t dev_mv  = meas_mv - (int32_t)g_vars.dac_offset;
+
+        if (dev_mv > DC_OVERLOAD_MV || dev_mv < -DC_OVERLOAD_MV)
+        {
+            canvas_draw_rect(2, 28, 50, 8, true, true);
+            canvas_draw_string(3, 28, "OVERLOAD", FONTSIZE_0806, false);
+        }
+        else
+        {
+            canvas_draw_string(3, 28, "Normal", FONTSIZE_0806, true);
+        }
+    }
+
     canvas_refresh();
 }
 

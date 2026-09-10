@@ -4,8 +4,9 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-#define AVDD_VOLT 3.3f
-#define VREF_VOLT 4.096f
+#define AVDD_VOLT 3.3f          // MCU ADC 的参考电压
+#define VREF_VOLT 4.096f        // 片外 DAC 基准
+#define DC_OVERLOAD_MV 30       // 输出过载阈值（仅在直流输出模式下有效）
 
 typedef enum
 {
