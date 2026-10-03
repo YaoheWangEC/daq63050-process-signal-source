@@ -30,6 +30,8 @@ DAQ63050 is a process signal source based on the **AT32L021** MCU, paired with a
 
 ## 快速上手 | Getting Started
 
+![DAQ63050](resource/working.jpg)
+
 ### 1. 接线 | Wiring
 
 | 接口名 | 接口形态 | 功能 | 备注 |
